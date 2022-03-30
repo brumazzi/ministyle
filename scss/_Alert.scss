@@ -1,0 +1,14 @@
+.alert{
+  padding: 1rem;
+  border: solid 1px $color-secondary;
+  color: $color-secondary;
+  background-color: $color-quinary;
+  border-radius: $border-radius;
+  @each $color-name, $color-code in $colors{
+    &.#{$color-name}{
+      background-color: lighten($color-code, 30%);
+      color: $color-code;
+      border-color: $color-code;
+    }
+  }
+}

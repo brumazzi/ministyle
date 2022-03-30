@@ -1,0 +1,64 @@
+// Animation
+
+$transition-time: 0.6s;
+
+[class*=transition-] {
+  transition: $transition-time;
+}
+
+a{
+  transition: color $transition-time;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  transition: background-color $transition-time;
+}
+
+.transition-text-color{
+  transition-property: color;
+}
+
+.transition-bg-color{
+  transition-property: background-color;
+}
+
+.transition-color{
+  transition-property: background-color color;
+}
+
+.transition-size{
+  transition-property: width height;
+}
+
+.transition-width{
+  transition-property: width;
+}
+
+.transition-height{
+  transition-property: height;
+}
+
+.transition-visibility{
+  transition-property: visibility;
+}
+
+@include animation(modal-show){
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@include animation(spin){
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

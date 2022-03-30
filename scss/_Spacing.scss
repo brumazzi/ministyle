@@ -1,0 +1,46 @@
+// Spacing
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$space-sizes: (0, 1, 2, 3, 4, 5);
+$directions: (
+  "l": "left",
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+);
+
+@each $space in $space-sizes {
+  .p-#{$space} {
+    padding: #{$space}rem !important;
+  }
+  .m-#{$space} {
+    margin: #{$space}rem !important;
+  }
+
+  .px-#{$space} {
+    padding-left: #{$space}rem !important;
+    padding-right: #{$space}rem !important;
+  }
+  .mx-#{$space} {
+    margin-left: #{$space}rem !important;
+    margin-right: #{$space}rem !important;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space}rem !important;
+    padding-bottom: #{$space}rem !important;
+  }
+  .my-#{$space} {
+    margin-top: #{$space}rem !important;
+    margin-bottom: #{$space}rem !important;
+  }
+
+  @each $direction, $controller in $directions {
+    .p#{$direction}-#{$space} {
+      padding-#{$controller}: #{$space}rem !important;
+    }
+    .m#{$direction}-#{$space} {
+      margin-#{$controller}: #{$space}rem !important;
+    }
+  }
+}

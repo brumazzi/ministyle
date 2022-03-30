@@ -1,0 +1,77 @@
+// Color
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$color-initial: #fff !default;
+$color-primary: #6495ed !default;
+$color-secondary: #606c76 !default;
+$color-tertiary: #f4f5f6 !default;
+$color-quaternary: #d1d1d1 !default;
+$color-quinary: #e1e1e1 !default;
+
+$color-success: #43ac7c !default;
+$color-danger: #cc5656 !default;
+$color-warning: #f0ae58 !default;
+$color-info: #78dcf0 !default;
+$color-light: #f8f9fa !default;
+$color-dark: #212529 !default;
+
+$color-border: #d0d0d0 !default;
+$color-transparent-dark: #00000041 !default;
+
+$color-lighten-primary: lighten($color-primary, 25%) !default;
+$color-lighten-success: lighten($color-success, 25%) !default;
+$color-lighten-danger: lighten($color-danger, 25%) !default;
+$color-lighten-warning: lighten($color-warning, 25%) !default;
+$color-lighten-info: lighten($color-info, 25%) !default;
+
+$color-darken-primary: darken($color-primary, 25%) !default;
+$color-darken-success: darken($color-success, 25%) !default;
+$color-darken-danger: darken($color-danger, 25%) !default;
+$color-darken-warning: darken($color-warning, 25%) !default;
+$color-darken-info: darken($color-info, 25%) !default;
+
+$colors: (
+  "primary" $color-primary,
+  "success" $color-success,
+  "danger" $color-danger,
+  "warning" $color-warning,
+  "info" $color-info,
+  "secondary" $color-secondary,
+  "light" $color-light,
+  "dark" $color-dark
+);
+
+$dark-light-colors:(
+  "lighten-primary" $color-lighten-primary,
+  "lighten-success" $color-lighten-success,
+  "lighten-danger" $color-lighten-danger,
+  "lighten-warning" $color-lighten-warning,
+  "lighten-info" $color-lighten-info,
+  "darken-primary" $color-darken-primary,
+  "darken-success" $color-darken-success,
+  "darken-danger" $color-darken-danger,
+  "darken-warning" $color-darken-warning,
+  "darken-info" $color-darken-info
+);
+
+/* Generate system colors */
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+    color: flip-color($color, $color-light, $color-dark) !important;
+  }
+}
+
+@each $name, $color in $dark-light-colors {
+  .bg-#{$name} {
+    background-color: $color !important;
+    color: flip-color($color, $color-light, $color-dark) !important;
+  }
+}
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+}
