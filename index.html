@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./ministyle.css">
+  <script src="./ministyle.js"></script>
+  <script>
+    window.addEventListener("load", (e)=>{
+      navbar = new Navbar(document.getElementById("navbar"))
+    })
+  </script>
+
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar bg-dark" id="navbar">
+    <ul class="group">
+      <li class="item active"><a href="#">Home</a></li>
+      <li class="item"><a href="#">Lorem</a></li>
+      <li class="item"><a href="#">Lorem</a></li>
+    </ul>
+  </nav>
+  <button class="navbar-toggle" onclick="navbar.toggle()"></button>
+</body>
+</html>

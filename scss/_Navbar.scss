@@ -39,8 +39,8 @@ nav.navbar {
     //   z-index: $navbar-z-index - 1;
     // }
     width: 0px;
-    height: 0px;
-    border-radius: 2rem;
+    height: $navbar-height-sm;
+    border-radius: 0rem;
     transition: 0.6s;
     // display: none;
     overflow: hidden;

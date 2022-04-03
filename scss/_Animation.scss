@@ -18,31 +18,31 @@ button,
 }
 
 .transition-text-color{
-  transition-property: color;
+  transition-property: color !important;
 }
 
 .transition-bg-color{
-  transition-property: background-color;
+  transition-property: background-color !important;
 }
 
 .transition-color{
-  transition-property: background-color color;
+  transition-property: background-color color !important;
 }
 
 .transition-size{
-  transition-property: width height;
+  transition-property: width height !important;
 }
 
 .transition-width{
-  transition-property: width;
+  transition-property: width !important;
 }
 
 .transition-height{
-  transition-property: height;
+  transition-property: height !important;
 }
 
 .transition-visibility{
-  transition-property: visibility;
+  transition-property: visibility !important;
 }
 
 @include animation(modal-show){
