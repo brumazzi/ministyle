@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,15 @@
   <link rel="stylesheet" href="./ministyle.css">
   <script src="./ministyle.js"></script>
   <script>
-    window.addEventListener("load", (e)=>{
+    window.addEventListener("load", (e) => {
       navbar = new Navbar(document.getElementById("navbar"))
+      modal = new Modal(document.getElementById("modal"))
     })
   </script>
 
   <title>Document</title>
 </head>
+
 <body>
   <nav class="navbar bg-dark" id="navbar">
     <ul class="group">
@@ -23,5 +26,229 @@
     </ul>
   </nav>
   <button class="navbar-toggle" onclick="navbar.toggle()"></button>
+
+  <div class="content mb-2">
+    <article>
+      <h3>Form Elements</h3>
+      <form action="" class="body pb-1 w-75">
+        <div class="row">
+          <div class="column-5 px-1">
+            <label for="">Lorem</label><input type="text" name="" id="">
+          </div>
+          <div class="column-5 px-1">
+            <label for="">Lorem</label><input type="number" name="" id="">
+          </div>
+          <div class="column-5 px-1">
+            <h3>Checkbox</h3>
+            <div class="row flex">
+              <div class="mx-1"><label for="">Lorem</label><input type="checkbox" name="" id="" class="switch"></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="checkbox" name="" id="" class="switch"></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="checkbox" name="" id="" class="switch" checked>
+              </div>
+            </div>
+            <div class="row flex">
+              <div class="mx-1"><label for="">Lorem</label><input type="checkbox" name="" id="" class="" checked></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="checkbox" name="" id="" class=""></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="checkbox" name="" id="" class=""></div>
+            </div>
+          </div>
+          <div class="column-5 px-1">
+            <h3>Radio Button</h3>
+            <div class="row flex">
+              <div class="mx-1"><label for="">Lorem</label><input type="radio" name="radio" id="" class="switch"></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="radio" name="radio" id="" class="switch"
+                  checked></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="radio" name="radio" id="" class="switch"></div>
+            </div>
+            <div class="row flex">
+              <div class="mx-1"><label for="">Lorem</label><input type="radio" name="radio2" id="" class=""></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="radio" name="radio2" id="" class=""></div>
+              <div class="mx-1"><label for="">Lorem</label><input type="radio" name="radio2" id="" class="" checked>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </article>
+    <article>
+      <h3>Buttons</h3>
+      <div class="flex row">
+        <div><button class="button">Normal</button></div>
+        <div><button class="button primary">Primary</button></div>
+        <div><button class="button success">Success</button></div>
+        <div><button class="button danger">Danger</button></div>
+        <div><button class="button info">Info</button></div>
+        <div><button class="button warning">Warning</button></div>
+        <div><button class="button dark">Dark</button></div>
+        <div><button class="button secondary">Secondary</button></div>
+      </div>
+      <h3>Outline Buttons</h3>
+      <div class="flex row">
+        <div><button class="button outline">Normal</button></div>
+        <div><button class="button outline primary">Primary</button></div>
+        <div><button class="button outline success">Success</button></div>
+        <div><button class="button outline danger">Danger</button></div>
+        <div><button class="button outline info">Info</button></div>
+        <div><button class="button outline warning">Warning</button></div>
+        <div><button class="button outline dark">Dark</button></div>
+        <div><button class="button outline secondary">Secondary</button></div>
+      </div>
+    </article>
+    <article>
+      <h3>Links</h3>
+      <div class="flex row">
+        <div class="mx-1"><a href="/" class="">Normal</a></div>
+        <div class="mx-1"><a href="/" class="primary">Primary</a></div>
+        <div class="mx-1"><a href="/" class="success">Success</a></div>
+        <div class="mx-1"><a href="/" class="danger">Danger</a></div>
+        <div class="mx-1"><a href="/" class="info">Info</a></div>
+        <div class="mx-1"><a href="/" class="warning">Warning</a></div>
+        <div class="mx-1"><a href="/" class="dark">Dark</a></div>
+        <div class="mx-1"><a href="/" class="secondary">Secondary</a></div>
+      </div>
+    </article>
+    <article>
+      <h3>Badges</h3>
+      <div class="flex row">
+        <div class="mx-1"><span class="badge">Normal</a></div>
+        <div class="mx-1"><span class="badge primary">Primary</a></div>
+        <div class="mx-1"><span class="badge success">Success</a></div>
+        <div class="mx-1"><span class="badge danger">Danger</a></div>
+        <div class="mx-1"><span class="badge info">Info</a></div>
+        <div class="mx-1"><span class="badge warning">Warning</a></div>
+        <div class="mx-1"><span class="badge dark">Dark</a></div>
+        <div class="mx-1"><span class="badge secondary">Secondary</a></div>
+      </div>
+    </article>
+
+    <article>
+      <h3>Alerts</h3>
+      <div class="my-1">
+        <div class="alert">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+      <div class="my-1">
+        <div class="alert primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+      <div class="my-1">
+        <div class="alert success">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+      <div class="my-1">
+        <div class="alert danger">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+      <div class="my-1">
+        <div class="alert info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+      <div class="my-1">
+        <div class="alert warning">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+      <div class="my-1">
+        <div class="alert dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+      <div class="my-1">
+        <div class="alert secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae fugiat libero maxime labore at nulla eos suscipit. Beatae accusantium excepturi, quas soluta assumenda rem, voluptates iusto nihil porro nesciunt aut?</div>
+      </div>
+    </article>
+
+    <article>
+      <h3>Card</h3>
+      <div class="card">
+        <div class="header"><span class="title">Lorem</span></div>
+        <div class="body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt cum deleniti veniam facere, vero velit
+            beatae laudantium. Voluptas quos ab quam sapiente fugit porro illum sit, ex necessitatibus eligendi enim?
+          </p>
+        </div>
+        <div class="footer">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+      </div>
+    </article>
+
+    <article>
+      <h3>Grid</h3>
+      <div class="row">
+        <div class="bg-dark column-5">column-5</div>
+        <div class="bg-primary column-5">column-5</div>
+        <div class="bg-dark column-4">column-4</div>
+        <div class="bg-primary column-6">column-6</div>
+        <div class="bg-dark column-3">column-3</div>
+        <div class="bg-primary column-7">column-7</div>
+        <div class="bg-dark column-2">column-2</div>
+        <div class="bg-primary column-8">column-8</div>
+        <div class="bg-dark column-1">column-1</div>
+        <div class="bg-primary column-9">column-9</div>
+        <div class="bg-dark column-10">column-10</div>
+        <div class="bg-primary column-2-5">column-2-5</div>
+        <div class="bg-dark column-7-5">column-7-5</div>
+      </div>
+    </article>
+    <article>
+      <h3>Grid</h3>
+        <ul class="pagination">
+          <li class="active"><a href="">1</a></li>
+          <li class="disabled"><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+        <ul class="pagination primary">
+          <li class="active"><a href="">1</a></li>
+          <li class="disabled"><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+        <ul class="pagination success">
+          <li class="active"><a href="">1</a></li>
+          <li class="disabled"><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+        <ul class="pagination danger">
+          <li class="active"><a href="">1</a></li>
+          <li class="disabled"><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+
+        <ul class="pagination warning">
+          <li class="active"><a href="">1</a></li>
+          <li class="disabled"><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+
+        <ul class="pagination info">
+          <li class="active"><a href="">1</a></li>
+          <li class="disabled"><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+
+        <ul class="pagination dark">
+          <li class="active"><a href="">1</a></li>
+          <li class="disabled"><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+      </article>
+
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="card bg-light w-50">
+      <div class="header">
+        <h3 class="title">Lorem</h3>
+      </div>
+      <div action="" class="body pb-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vero minus labore voluptatem incidunt delectus
+          quia sed cupiditate, ratione ullam. Nisi ex aut culpa laudantium fuga? Placeat quasi nostrum distinctio.</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

@@ -1307,37 +1307,37 @@ a {
   text-decoration: none; }
   a:focus, a:hover {
     color: #606c76; }
-  a.text-primary {
+  a.primary {
     color: #6495ed; }
-    a.text-primary:hover, a.text-primary:focus {
+    a.primary:hover, a.primary:focus {
       color: #3676e8; }
-  a.text-success {
+  a.success {
     color: #43ac7c; }
-    a.text-success:hover, a.text-success:focus {
+    a.success:hover, a.success:focus {
       color: #358762; }
-  a.text-danger {
+  a.danger {
     color: #cc5656; }
-    a.text-danger:hover, a.text-danger:focus {
+    a.danger:hover, a.danger:focus {
       color: #b83737; }
-  a.text-warning {
+  a.warning {
     color: #f0ae58; }
-    a.text-warning:hover, a.text-warning:focus {
+    a.warning:hover, a.warning:focus {
       color: #ec9729; }
-  a.text-info {
+  a.info {
     color: #78dcf0; }
-    a.text-info:hover, a.text-info:focus {
+    a.info:hover, a.info:focus {
       color: #4ad0eb; }
-  a.text-secondary {
+  a.secondary {
     color: #606c76; }
-    a.text-secondary:hover, a.text-secondary:focus {
+    a.secondary:hover, a.secondary:focus {
       color: #49525a; }
-  a.text-light {
+  a.light {
     color: #f8f9fa; }
-    a.text-light:hover, a.text-light:focus {
+    a.light:hover, a.light:focus {
       color: #dae0e5; }
-  a.text-dark {
+  a.dark {
     color: #212529; }
-    a.text-dark:hover, a.text-dark:focus {
+    a.dark:hover, a.dark:focus {
       color: #0a0c0d; }
 
 dl,
@@ -1908,7 +1908,9 @@ nav.navbar {
   border: solid 1px #606c76;
   color: #606c76;
   background-color: #e1e1e1;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+  display: block;
+  width: 100%; }
   .alert.primary {
     background-color: #edf3fd;
     color: #6495ed;

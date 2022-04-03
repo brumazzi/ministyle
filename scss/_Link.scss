@@ -10,11 +10,11 @@ a {
     color: $color-secondary;
   }
 
-  @each $name, $color in $colors{
-    &.text-#{$name}{
-      color: $color;
+  @each $color-name, $color-code in $colors{
+    &.#{$color-name}{
+      color: $color-code;
       &:hover, &:focus{
-        color: darken($color, 10%);
+        color: darken($color-code, 10%);
       }
     }
   }
