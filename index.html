@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-loading=true>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
       navbar = new Navbar(document.getElementById("navbar"))
       modal = new Modal(document.getElementById("modal"))
       carousel = new Carousel(document.getElementById("carousel"))
+      SVGIcon.addLoading()
     })
   </script>
 
@@ -41,16 +42,6 @@
         </svg>
       </article>
     </section>
-  </div>
-
-
-  <div class="loading">
-    <svg width="512" height="512">
-      <circle r="16" fill="black" cx="50%" cy="50%"></circle>
-      <circle r="16" fill="black" cx="50%" cy="50%"></circle>
-      <circle r="16" fill="black" cx="50%" cy="50%"></circle>
-      <circle r="16" fill="black" cx="50%" cy="50%"></circle>
-    </svg>
   </div>
 
   <div class="content mb-2">

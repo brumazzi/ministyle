@@ -21,7 +21,6 @@ class Carousel{
         this.changeIn = this.timeout
         this.next()
       }else this.changeIn -= 1
-      console.log(this.changeIn)
     }, 1000)
   }
 
