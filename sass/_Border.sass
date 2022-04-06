@@ -1,0 +1,8 @@
+.b
+  border: solid 1px $color-border
+.b-0
+  border: none
+
+@each $direction, $controller in $directions
+  .b#{$direction}
+    border-#{$controller}: solid 1px $color-border

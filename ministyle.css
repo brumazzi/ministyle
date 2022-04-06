@@ -2008,3 +2008,21 @@ html[data-loading=true] .loading {
 
 .carousel[data-transition="opacity"] > .content > *.active {
   animation: animation-show 2.5s; }
+
+.b {
+  border: solid 1px #d0d0d0; }
+
+.b-0 {
+  border: none; }
+
+.bl {
+  border-left: solid 1px #d0d0d0; }
+
+.bt {
+  border-top: solid 1px #d0d0d0; }
+
+.br {
+  border-right: solid 1px #d0d0d0; }
+
+.bb {
+  border-bottom: solid 1px #d0d0d0; }
