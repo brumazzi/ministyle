@@ -1,0 +1,16 @@
+// Color
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@each $name, $color in $colors
+  .bg-#{$name}
+    background-color: $color !important
+    color: flip-color($color, $color-light, $color-dark) !important
+
+@each $name, $color in $dark-light-colors
+  .bg-#{$name}
+    background-color: $color !important
+    color: flip-color($color, $color-light, $color-dark) !important
+
+@each $name, $color in $colors
+  .text-#{$name}
+    color: $color !important

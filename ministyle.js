@@ -1,27 +1,25 @@
-var Accordion = /** @class */ (function () {
-    function Accordion(element) {
-        var _this = this;
+class Accordion {
+    constructor(element) {
         this.target = element;
-        element.querySelectorAll(".header").forEach(function (e, index) {
-            e.addEventListener("click", function (evt) {
-                _this.toggle(e.getAttribute('data-target'));
+        element.querySelectorAll(".header").forEach((e, index) => {
+            e.addEventListener("click", (evt) => {
+                this.toggle(e.getAttribute('data-target'));
             });
         });
     }
-    Accordion.prototype.toggle = function (targetID) {
-        this.target.querySelector("#".concat(targetID)).classList.toggle("active");
-    };
-    Accordion.prototype.show = function (targetID) {
-        this.target.querySelector("#".concat(targetID)).classList.add("active");
-    };
-    Accordion.prototype.hide = function (targetID) {
-        this.target.querySelector("#".concat(targetID)).classList.remove("active");
-    };
-    Accordion.prototype.destroy = function () {
+    toggle(targetID) {
+        this.target.querySelector(`#${targetID}`).classList.toggle("active");
+    }
+    show(targetID) {
+        this.target.querySelector(`#${targetID}`).classList.add("active");
+    }
+    hide(targetID) {
+        this.target.querySelector(`#${targetID}`).classList.remove("active");
+    }
+    destroy() {
         this.target.remove();
-    };
-    return Accordion;
-}());
+    }
+}
 // register async requests
 XMLHttpRequest.prototype["requests"] = 0;
 XMLHttpRequest.prototype["nativeSend"] = XMLHttpRequest.prototype.send;
@@ -37,57 +35,97 @@ XMLHttpRequest.prototype.send = function (body) {
         }
     };
 };
-window["getAsyncRequests"] = function () {
+window["getAsyncRequests"] = () => {
     return XMLHttpRequest.prototype["requests"];
 };
-window.addEventListener("load", function () {
+class Carousel {
+    constructor(element) {
+        this.items = new Array();
+        this.target = element;
+        let e;
+        element.querySelectorAll(".content > *").forEach((e) => {
+            this.items.push(e);
+        });
+        this.index = 0;
+        this.timeout = 5;
+        this.changeIn = 5;
+        this.intervalRef = setInterval(() => {
+            if (this.changeIn <= 0) {
+                this.changeIn = this.timeout;
+                this.next();
+            }
+            else
+                this.changeIn -= 1;
+            console.log(this.changeIn);
+        }, 1000);
+    }
+    setInterval(interval) {
+        this.timeout = interval;
+        this.changeIn = interval;
+    }
+    next() {
+        this.items[this.index].classList.remove('active');
+        this.items[this.index].classList.add('hide');
+        this.index = (this.index + 1) % this.items.length;
+        this.items[this.index].classList.remove('hide');
+        this.items[this.index].classList.add('active');
+        this.changeIn = this.timeout;
+    }
+    prev() {
+        this.items[this.items.length - (this.index + 1)].classList.remove('active');
+        this.items[this.index].classList.add('hide');
+        this.index = (this.index + 1) % this.items.length;
+        this.items[this.index].classList.remove('hide');
+        this.items[this.items.length - (this.index + 1)].classList.add('active');
+        this.changeIn = this.timeout;
+    }
+}
+window.addEventListener("load", () => {
     invalidBlankAnchor();
 });
 // disable anchor without reference
 function invalidBlankAnchor() {
-    var anchors = document.querySelectorAll("a[href=''], a[href='#']");
-    var i = 0;
+    let anchors = document.querySelectorAll("a[href=''], a[href='#']");
+    let i = 0;
     for (i = 0; i < anchors.length; i += 1) {
-        anchors[i].addEventListener("click", function (e) { e.preventDefault(); });
+        anchors[i].addEventListener("click", (e) => { e.preventDefault(); });
     }
 }
 // Modal Object
-var Modal = /** @class */ (function () {
-    function Modal(element) {
+class Modal {
+    constructor(element) {
         this.target = element;
-        element.addEventListener("click", function (e) {
+        element.addEventListener("click", (e) => {
             if (e.target.className.split(' ').includes("modal")) {
                 e.target.classList.remove("active");
             }
         });
     }
-    Modal.prototype.show = function () {
+    show() {
         this.target.classList.add("active");
-    };
-    Modal.prototype.hide = function () {
+    }
+    hide() {
         this.target.classList.remove("active");
-    };
-    Modal.prototype.destroy = function () {
+    }
+    destroy() {
         this.target.remove();
-    };
-    return Modal;
-}());
+    }
+}
 // Modal Object
-var Navbar = /** @class */ (function () {
-    function Navbar(element) {
+class Navbar {
+    constructor(element) {
         this.target = element;
     }
-    Navbar.prototype.toggle = function () {
+    toggle() {
         this.target.classList.toggle("active");
-    };
-    Navbar.prototype.show = function () {
+    }
+    show() {
         this.target.classList.add("active");
-    };
-    Navbar.prototype.hide = function () {
+    }
+    hide() {
         this.target.classList.remove("active");
-    };
-    Navbar.prototype.destroy = function () {
+    }
+    destroy() {
         this.target.remove();
-    };
-    return Navbar;
-}());
+    }
+}

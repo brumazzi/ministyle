@@ -1,0 +1,107 @@
+nav.navbar
+  z-index: $navbar-z-index
+  background-color: $color-light
+  position: fixed
+  & .group
+    margin-bottom: 0px
+
+.navbar-toggle
+  display: none
+
+@media only screen and (max-width: $screen-md)
+  .navbar-toggle
+    display: block
+    width: 4rem
+    height: 4rem
+    padding: 0px
+    position: fixed
+    top: 1rem
+    right: 1rem
+    z-index: $navbar-z-index
+
+  nav.navbar
+    // &::before
+    //   display: block
+    //   content: ""
+    //   position: fixed
+    //   top: 0px
+    //   left: 0px
+    //   width: 100vw
+    //   height: 100vh
+    //   background-color: $color-transparent-dark
+    //   z-index: $navbar-z-index - 1
+    //
+    width: 0px
+    height: $navbar-height-sm
+    border-radius: 0rem
+    transition: 0.6s
+    // display: none
+    overflow: hidden
+    background: $color-light
+    box-shadow: 0 0 10px $color-transparent-dark !important
+    line-height: 3rem
+    & > .group
+      list-style: none
+      text-decoration: none
+      & > .item
+        & > a
+          display: block
+          height: 100%
+          // padding: 0rem
+          border-bottom: 0.2rem solid transparent
+          transition: color background 0.6s
+          font-size: 2rem
+
+        &.active > *
+          // border-color: $color-primary
+          background-color: $color-lighten-primary
+
+        &:hover > *
+          // border-color: $color-primary
+          background-color: $color-lighten-primary
+
+    &.active
+      width: $navbar-width
+      height: $navbar-height-sm
+      border-radius: 0px
+      left: 0px
+      top: 0px
+      // display: block
+      overflow-y: auto
+
+@media only screen and (min-width: $screen-md)
+  body
+    padding-top: $navbar-height
+
+  nav.navbar
+    top: 0px
+    left: 0px
+    transition: 0.6s
+    display: flex
+    justify-content: space-between
+    height: $navbar-height
+    width: 100vw
+    line-height: $navbar-height
+    padding: 0 2rem
+    justify-content: space-between
+    display: flex
+    & > .group
+      list-style: none
+      text-decoration: none
+      display: table
+      content: ""
+      & .item
+        float: left
+        display: block
+        padding: 0.5rem 0rem
+        & > a
+          padding: 0rem 1rem
+          border-bottom: 0.2rem solid transparent
+          transition: border 0.6s
+          font-size: 2rem
+
+        &.active > *
+          border-color: $color-primary
+
+        &:hover > *
+          border-color: $color-primary

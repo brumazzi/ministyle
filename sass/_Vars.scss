@@ -1,5 +1,64 @@
-// Color
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
+$border-radius: .25rem;
+
+$space-sizes: (0, 1, 2, 3, 4, 5);
+$directions: (
+  "l": "left",
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+);
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screens: (
+  "sm": $screen-sm,
+  "md": $screen-md,
+  "lg": $screen-lg,
+  "xl": $screen-xl,
+);
+
+$displays: (none, inline, block, table, inline-block);
+
+$navbar-height: 6rem;
+$navbar-height-sm: 100vh;
+$navbar-width: 34rem;
+$navbar-z-index: 20;
+
+$modal-z-index: 10;
+
+$row-division: (
+  "1": 10%,
+  "2": 20%,
+  "2-5": 25%,
+  "3": 30%,
+  "4": 40%,
+  "5": 50%,
+  "6": 60%,
+  "7": 70%,
+  "7-5": 75%,
+  "8": 80%,
+  "9": 90%,
+  "10": 100%,
+);
+
+$justify-contents: (
+  "center": center,
+  "end": end,
+  "start": start,
+  "between": space-between,
+  "evenly": space-evenly,
+  "around": space-around,
+);
+
+$align-items: (
+  "center": center,
+  "end": flex-end,
+  "start": flex-start,
+  "stretch": stretch,
+);
 
 $color-initial: #fff !default;
 $color-primary: #6495ed !default;
@@ -41,7 +100,7 @@ $colors: (
   "dark" $color-dark
 );
 
-$dark-light-colors:(
+$dark-light-colors: (
   "lighten-primary" $color-lighten-primary,
   "lighten-success" $color-lighten-success,
   "lighten-danger" $color-lighten-danger,
@@ -53,25 +112,3 @@ $dark-light-colors:(
   "darken-warning" $color-darken-warning,
   "darken-info" $color-darken-info
 );
-
-/* Generate system colors */
-
-@each $name, $color in $colors {
-  .bg-#{$name} {
-    background-color: $color !important;
-    color: flip-color($color, $color-light, $color-dark) !important;
-  }
-}
-
-@each $name, $color in $dark-light-colors {
-  .bg-#{$name} {
-    background-color: $color !important;
-    color: flip-color($color, $color-light, $color-dark) !important;
-  }
-}
-
-@each $name, $color in $colors {
-  .text-#{$name} {
-    color: $color !important;
-  }
-}

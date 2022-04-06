@@ -1,0 +1,39 @@
+.accordion
+  border: solid 1px $color-border
+  border-radius: $border-radius
+  overflow: hidden
+  & > *
+    & > .header
+      cursor: pointer
+      line-height: 3.8rem
+      font-size: 2.3rem
+      padding: 0 1rem
+      transition: background $transition-time
+      display: flex
+      justify-content: space-between
+      border-top: solid 1px $color-border
+      align-items: center
+      & .arrow
+        width: 1.8rem
+        height: 1.8rem
+        transform: rotate(0deg)
+        transition: transform $transition-time
+        background-image: url("img/arrow.svg")
+        background-size: 100% 100%
+    &:first-child > .header
+      border: none
+    & > .body
+      max-height: 0rem
+      display: block
+      overflow: hidden
+      transition: $transition-time
+      padding: 0 1rem
+  & > .active
+    & > .header
+      background: $color-lighten-primary
+      & .arrow
+        transform: rotate(180deg)
+    & > .body
+      max-height: 50vh
+      overflow-y: auto
+      border-top: solid 1px $color-border

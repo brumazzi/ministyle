@@ -1,0 +1,81 @@
+// Grid
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+body > .content
+  margin: 0 auto
+  max-width: 112rem
+  padding: 0 1rem
+  position: relative
+  width: 100%
+
+.row:not(.flex)
+  display: table
+  & > [class*="column-"]
+    float: left
+
+.row,
+.flex
+  padding: 0px
+  width: 100%
+  & > [class*="column-"]
+    padding: 0px 0rem
+    display: block
+    margin: 0px
+    border: 0px
+    &:first-child
+      padding-left: 0px
+
+    &:last-child
+      padding-right: 0px
+
+  @media only screen and (max-width: 576px)
+    & > [class*="column-"]
+      width: 100% !important
+
+  @each $column-name, $column-size in $row-division
+    & > .column-#{$column-name}
+      width: $column-size
+
+  @each $screen-name, $screen-size in $screens
+    @media only screen and (min-width: $screen-size)
+      @each $column-name, $column-size in $row-division
+        & > .column-#{$screen-name}-#{$column-name}
+          width: $column-size
+
+$flex-direction: (row, row-reverse, column, column-reverse)
+// $flex-align: (flex-start, flex-end, center, stretch, baseline)
+// $flex-column-align: (flex-start, flex-end, center)
+
+.flex
+  display: flex
+  width: 100%
+  padding: 0px
+  @each $direction in $flex-direction
+    &.#{$direction}
+      flex-direction: $direction
+
+  // @each $align in $flex-align
+  //   &.align-#{$align}
+  //     align-items: $align !important
+  //
+  //
+  // @each $column-align in $flex-column-align
+  //   & > *[class=align-#{$column-align}]
+  //     align-self: $column-align !important
+  //
+  //
+
+  @media only screen and (max-width: 576px)
+    flex-direction: column !important
+
+  @media only screen and (max-width: 576px)
+    .column-reverse
+      flex-direction: column-reverse !important
+
+@each $content-name, $content-align in $justify-contents
+  .justify-contents-#{$content-name}
+    justify-content: $content-align
+
+@each $content-name, $content-align in $align-items
+  .align-items-#{$content-name}
+    align-items: $content-align
