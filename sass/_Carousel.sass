@@ -1,0 +1,34 @@
+@include animation(show)
+  0%
+    opacity: 0
+    position: relative
+    width: 100%
+
+  100%
+    opacity: 1
+    position: relative
+    width: 100%
+
+$carousel-width: 100%
+$carousel-height: 35.139vw
+
+.carousel
+  display: block
+  width: $carousel-width
+  // height: $carousel-height
+  overflow: auto
+  & > .content
+    display: block
+    overflow: hidden
+    width: auto
+    // height: $carousel-height
+    & > *
+      display: none
+      &.active
+        display: block
+        width: 100%
+
+.carousel
+  &[data-transition="opacity"] > .content > *
+    &.active
+      animation: animation-show 2.5s
