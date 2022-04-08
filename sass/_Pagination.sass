@@ -35,12 +35,13 @@
       border-color: $color-code
       & > *
         border-color: $color-code
+        transition: $transition-time
         & > *
           color: $color-code
 
         &.active
           background-color: $color-code
-          &:hover
-            background-color: $color-code
-          & > *
+        &:not(.disabled):hover
+          background-color: $color-code
+        &:hover > *, &:active > *
             color: $color-light

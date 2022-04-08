@@ -3,3 +3,13 @@
     @content
   @keyframes animation-#{$name}
     @content
+
+@mixin screen($alias, $attr: null)
+  @each $screen-name, $screen-size in $screens
+    @media only screen and (min-width: $screen-size)
+      @if($attr == null)
+        .#{$alias}-#{$screen-name}
+          @content
+      @else
+        .#{$alias}-#{$screen-name}-#{$attr}
+          @content

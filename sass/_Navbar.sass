@@ -2,6 +2,7 @@ nav.navbar
   z-index: $navbar-z-index
   background-color: $color-light
   position: fixed
+
   & .group
     margin-bottom: 0px
 
@@ -40,17 +41,31 @@ nav.navbar
     background: $color-light
     box-shadow: 0 0 10px $color-transparent-dark !important
     line-height: 3rem
-    & > .group
+    & .group
       list-style: none
       text-decoration: none
       & > .item
-        & > a
+        a
           display: block
           height: 100%
           // padding: 0rem
           border-bottom: 0.2rem solid transparent
           transition: color background 0.6s
           font-size: 2rem
+
+        & > .submenu
+          display: none
+          min-width: 12rem
+          margin: 0px
+          &.show
+            display: block
+          & > .item
+            width: 100%
+            padding: 0px
+            & a
+              padding-left: 2.8rem
+              display: block
+              width: 100%
 
         &.active > *
           // border-color: $color-primary
@@ -85,7 +100,7 @@ nav.navbar
     padding: 0 2rem
     justify-content: space-between
     display: flex
-    & > .group
+    & .group
       list-style: none
       text-decoration: none
       display: table
@@ -93,15 +108,34 @@ nav.navbar
       & .item
         float: left
         display: block
-        padding: 0.5rem 0rem
-        & > a
+        padding: 0rem 0rem
+        & > .submenu
+          display: none
+          position: absolute
+          transform: translateY(-0.7rem)
+          min-width: 12rem
+          margin: 0px
+          & > .item
+            float: none !important
+            width: 100%
+            padding: 0px
+            line-height: 3.6rem
+            text-align: left
+            & a
+              display: block
+              width: 100%
+        & a
           padding: 0rem 1rem
           border-bottom: 0.2rem solid transparent
           transition: border 0.6s
           font-size: 2rem
 
-        &.active > *
-          border-color: $color-primary
+        &.active
+          & > *
+            border-color: $color-primary
 
-        &:hover > *
-          border-color: $color-primary
+        &:hover
+          & > .submenu
+            display: block
+          & > *
+            border-color: $color-primary

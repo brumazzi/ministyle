@@ -9,10 +9,14 @@
   <script src="./ministyle.js"></script>
   <script>
     window.addEventListener("load", (e) => {
+      SVGIcon.addLoading()
+
       navbar = new Navbar(document.getElementById("navbar"))
       modal = new Modal(document.getElementById("modal"))
       carousel = new Carousel(document.getElementById("carousel"))
-      SVGIcon.addLoading()
+      accordion = new Accordion(document.getElementById("accordion"))
+      collapse = new Collapse(document.getElementById("collapse"))
+      scrollInit()
     })
   </script>
 
@@ -24,6 +28,14 @@
     <ul class="group">
       <li class="item active"><a href="#">Home</a></li>
       <li class="item"><a href="#">Lorem</a></li>
+      <li class="item">
+        <a href="#" id="submenu">Lorem</a>
+        <ul class="submenu collapse bg-dark group" data-collapsed="submenu" id="collapse">
+          <li class="item"><a href="#">Lorem</a></li>
+          <li class="item"><a href="#">Lorem</a></li>
+          <li class="item"><a href="#">Lorem</a></li>
+        </ul>
+      </li>
       <li class="item"><a href="#">Lorem</a></li>
     </ul>
   </nav>
@@ -88,6 +100,35 @@
       </form>
     </article>
     <article>
+      <h3>Dropdown</h3>
+      <div class="flex row">
+        <div class="dropdown">
+          <span>Lorem 01</span>
+          <ul class="content">
+            <li>Lorem 01</li>
+            <li>Lorem 02</li>
+            <li>Lorem 03</li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <span>Lorem 02</span>
+          <ul class="content">
+            <li>Lorem 01</li>
+            <li>Lorem 02</li>
+            <li>Lorem 03</li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <span>Lorem 03</span>
+          <ul class="content">
+            <li>Lorem 01</li>
+            <li>Lorem 02</li>
+            <li>Lorem 03</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article>
       <h3>Buttons</h3>
       <div class="flex row">
         <div><button class="button">Normal</button></div>
@@ -136,6 +177,36 @@
         <div class="mx-1"><span class="badge dark">Dark</a></div>
         <div class="mx-1"><span class="badge secondary">Secondary</a></div>
       </div>
+    </article>
+
+    <article>
+      <h3>Accordion</h3>
+      <section class="accordion" id="accordion">
+        <article id="item-01">
+          <div class="header" data-target="item-01">
+            <h5>Lorem</h5>
+          </div>
+          <div class="body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloremque harum laboriosam iusto. At exercitationem dolorum impedit, debitis iusto culpa ratione blanditiis, eaque quae quam facilis, corporis deleniti veniam voluptatum.</p>
+          </div>
+        </article>
+        <article id="item-02">
+          <div class="header" data-target="item-02">
+            <h5>Lorem</h5>
+          </div>
+          <div class="body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloremque harum laboriosam iusto. At exercitationem dolorum impedit, debitis iusto culpa ratione blanditiis, eaque quae quam facilis, corporis deleniti veniam voluptatum.</p>
+          </div>
+        </article>
+        <article id="item-03">
+          <div class="header" data-target="item-03">
+            <h5>Lorem</h5>
+          </div>
+          <div class="body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloremque harum laboriosam iusto. At exercitationem dolorum impedit, debitis iusto culpa ratione blanditiis, eaque quae quam facilis, corporis deleniti veniam voluptatum.</p>
+          </div>
+        </article>
+      </section>
     </article>
 
     <article>
@@ -196,6 +267,15 @@
     </article>
 
     <article>
+      <h3>Box Group</h3>
+      <div class="box-group">
+        <input type="text">
+        <button>x</button>
+      </div>
+
+    </article>
+
+    <article>
       <h3>Grid</h3>
       <div class="row">
         <div class="bg-dark column-5">column-5</div>
@@ -214,37 +294,29 @@
       </div>
     </article>
     <article>
-      <h3>Grid</h3>
-      <ul class="pagination">
+      <h3>Pagination</h3>
+      <ul class="d-inline-block pagination">
         <li class="active"><a href="">1</a></li>
         <li class="disabled"><a href="">2</a></li>
         <li><a href="">3</a></li>
         <li><a href="">4</a></li>
         <li><a href="">5</a></li>
       </ul>
-      <ul class="pagination primary">
+      <ul class="d-inline-block pagination primary">
         <li class="active"><a href="">1</a></li>
         <li class="disabled"><a href="">2</a></li>
         <li><a href="">3</a></li>
         <li><a href="">4</a></li>
         <li><a href="">5</a></li>
       </ul>
-      <ul class="pagination success">
+      <ul class="d-inline-block pagination success">
         <li class="active"><a href="">1</a></li>
         <li class="disabled"><a href="">2</a></li>
         <li><a href="">3</a></li>
         <li><a href="">4</a></li>
         <li><a href="">5</a></li>
       </ul>
-      <ul class="pagination danger">
-        <li class="active"><a href="">1</a></li>
-        <li class="disabled"><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-      </ul>
-
-      <ul class="pagination warning">
+      <ul class="d-inline-block pagination danger">
         <li class="active"><a href="">1</a></li>
         <li class="disabled"><a href="">2</a></li>
         <li><a href="">3</a></li>
@@ -252,7 +324,7 @@
         <li><a href="">5</a></li>
       </ul>
 
-      <ul class="pagination info">
+      <ul class="d-inline-block pagination warning">
         <li class="active"><a href="">1</a></li>
         <li class="disabled"><a href="">2</a></li>
         <li><a href="">3</a></li>
@@ -260,7 +332,15 @@
         <li><a href="">5</a></li>
       </ul>
 
-      <ul class="pagination dark">
+      <ul class="d-inline-block pagination info">
+        <li class="active"><a href="">1</a></li>
+        <li class="disabled"><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+      </ul>
+
+      <ul class="d-inline-block pagination dark">
         <li class="active"><a href="">1</a></li>
         <li class="disabled"><a href="">2</a></li>
         <li><a href="">3</a></li>
@@ -268,7 +348,6 @@
         <li><a href="">5</a></li>
       </ul>
     </article>
-
   </div>
 
   <div class="modal" id="modal">

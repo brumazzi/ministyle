@@ -30,3 +30,35 @@
 
     .m#{$direction}-#{$space}
       margin-#{$controller}: #{$space}rem !important
+
+@each $screen-name, $screen-size in $screens
+  @media only screen and (min-width: $screen-size)
+    @each $space in $space-sizes
+      .p-#{$screen-name}-#{$space}
+        padding: #{$space}rem !important
+
+      .m-#{$screen-name}-#{$space}
+        margin: #{$space}rem !important
+
+      .px-#{$screen-name}-#{$space}
+        padding-left: #{$space}rem !important
+        padding-right: #{$space}rem !important
+
+      .mx-#{$screen-name}-#{$space}
+        margin-left: #{$space}rem !important
+        margin-right: #{$space}rem !important
+
+      .py-#{$screen-name}-#{$space}
+        padding-top: #{$space}rem !important
+        padding-bottom: #{$space}rem !important
+
+      .my-#{$screen-name}-#{$space}
+        margin-top: #{$space}rem !important
+        margin-bottom: #{$space}rem !important
+
+      @each $direction, $controller in $directions
+        .p#{$direction}-#{$screen-name}-#{$space}
+          padding-#{$controller}: #{$space}rem !important
+
+        .m#{$direction}-#{$screen-name}-#{$space}
+          margin-#{$controller}: #{$space}rem !important
