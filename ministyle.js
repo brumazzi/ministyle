@@ -100,14 +100,12 @@ class Collapse {
         this.target.remove();
     }
 }
-window.addEventListener("load", () => {
-    invalidBlankAnchor();
-});
 // disable anchor without reference
 function invalidBlankAnchor() {
     let anchors = document.querySelectorAll("a[href=''], a[href='#']");
     let i = 0;
     for (i = 0; i < anchors.length; i += 1) {
+        console.log(anchors[i]);
         anchors[i].addEventListener("click", (e) => { e.preventDefault(); });
     }
 }
@@ -165,6 +163,11 @@ window["scrollGroup"] = () => {
     }
     return "";
 };
+function scrollSync() {
+    setInterval(() => {
+        document.body.setAttribute("data-scroll", window["scrollGroup"]());
+    }, 300);
+}
 class SVGIcon {
     static arrow(dest, opt = {}) {
         let svg = document.createElement('svg');

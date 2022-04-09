@@ -1,16 +1,24 @@
 // Color
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@each $name, $color in $colors
-  .bg-#{$name}
+@each $color-name, $color in $colors
+  .bg-#{$color-name}
+    background-color: $color !important
+    color: flip-color($color, $color-light, $color-dark) !important
+  .bg-hover-#{$color-name}:hover
     background-color: $color !important
     color: flip-color($color, $color-light, $color-dark) !important
 
-@each $name, $color in $dark-light-colors
-  .bg-#{$name}
+@each $color-name, $color in $dark-light-colors
+  .bg-#{$color-name}
+    background-color: $color !important
+    color: flip-color($color, $color-light, $color-dark) !important
+  .bg-hover-#{$color-name}:hover
     background-color: $color !important
     color: flip-color($color, $color-light, $color-dark) !important
 
-@each $name, $color in $colors
-  .text-#{$name}
+@each $color-name, $color in $colors
+  .text-#{$color-name}
+    color: $color !important
+  .text-hover-#{$color-name}:hover
     color: $color !important

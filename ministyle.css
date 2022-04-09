@@ -2,7 +2,15 @@
   background-color: #6495ed !important;
   color: #212529 !important; }
 
+.bg-hover-primary:hover {
+  background-color: #6495ed !important;
+  color: #212529 !important; }
+
 .bg-success {
+  background-color: #43ac7c !important;
+  color: #f8f9fa !important; }
+
+.bg-hover-success:hover {
   background-color: #43ac7c !important;
   color: #f8f9fa !important; }
 
@@ -10,7 +18,15 @@
   background-color: #cc5656 !important;
   color: #f8f9fa !important; }
 
+.bg-hover-danger:hover {
+  background-color: #cc5656 !important;
+  color: #f8f9fa !important; }
+
 .bg-warning {
+  background-color: #f0ae58 !important;
+  color: #212529 !important; }
+
+.bg-hover-warning:hover {
   background-color: #f0ae58 !important;
   color: #212529 !important; }
 
@@ -18,7 +34,15 @@
   background-color: #78dcf0 !important;
   color: #212529 !important; }
 
+.bg-hover-info:hover {
+  background-color: #78dcf0 !important;
+  color: #212529 !important; }
+
 .bg-secondary {
+  background-color: #606c76 !important;
+  color: #f8f9fa !important; }
+
+.bg-hover-secondary:hover {
   background-color: #606c76 !important;
   color: #f8f9fa !important; }
 
@@ -26,7 +50,15 @@
   background-color: #f8f9fa !important;
   color: #212529 !important; }
 
+.bg-hover-light:hover {
+  background-color: #f8f9fa !important;
+  color: #212529 !important; }
+
 .bg-dark {
+  background-color: #212529 !important;
+  color: #f8f9fa !important; }
+
+.bg-hover-dark:hover {
   background-color: #212529 !important;
   color: #f8f9fa !important; }
 
@@ -34,7 +66,15 @@
   background-color: #d6e3fa !important;
   color: #212529 !important; }
 
+.bg-hover-lighten-primary:hover {
+  background-color: #d6e3fa !important;
+  color: #212529 !important; }
+
 .bg-lighten-success {
+  background-color: #98d7ba !important;
+  color: #212529 !important; }
+
+.bg-hover-lighten-success:hover {
   background-color: #98d7ba !important;
   color: #212529 !important; }
 
@@ -42,7 +82,15 @@
   background-color: #eab8b8 !important;
   color: #212529 !important; }
 
+.bg-hover-lighten-danger:hover {
+  background-color: #eab8b8 !important;
+  color: #212529 !important; }
+
 .bg-lighten-warning {
+  background-color: #fbe7cd !important;
+  color: #212529 !important; }
+
+.bg-hover-lighten-warning:hover {
   background-color: #fbe7cd !important;
   color: #212529 !important; }
 
@@ -50,7 +98,15 @@
   background-color: #ebfafd !important;
   color: #212529 !important; }
 
+.bg-hover-lighten-info:hover {
+  background-color: #ebfafd !important;
+  color: #212529 !important; }
+
 .bg-darken-primary {
+  background-color: #1651bc !important;
+  color: #f8f9fa !important; }
+
+.bg-hover-darken-primary:hover {
   background-color: #1651bc !important;
   color: #f8f9fa !important; }
 
@@ -58,7 +114,15 @@
   background-color: #1f503a !important;
   color: #f8f9fa !important; }
 
+.bg-hover-darken-success:hover {
+  background-color: #1f503a !important;
+  color: #f8f9fa !important; }
+
 .bg-darken-danger {
+  background-color: #7d2626 !important;
+  color: #f8f9fa !important; }
+
+.bg-hover-darken-danger:hover {
   background-color: #7d2626 !important;
   color: #f8f9fa !important; }
 
@@ -66,32 +130,64 @@
   background-color: #b86f11 !important;
   color: #f8f9fa !important; }
 
+.bg-hover-darken-warning:hover {
+  background-color: #b86f11 !important;
+  color: #f8f9fa !important; }
+
 .bg-darken-info {
+  background-color: #17b2d1 !important;
+  color: #f8f9fa !important; }
+
+.bg-hover-darken-info:hover {
   background-color: #17b2d1 !important;
   color: #f8f9fa !important; }
 
 .text-primary {
   color: #6495ed !important; }
 
+.text-hover-primary:hover {
+  color: #6495ed !important; }
+
 .text-success {
+  color: #43ac7c !important; }
+
+.text-hover-success:hover {
   color: #43ac7c !important; }
 
 .text-danger {
   color: #cc5656 !important; }
 
+.text-hover-danger:hover {
+  color: #cc5656 !important; }
+
 .text-warning {
+  color: #f0ae58 !important; }
+
+.text-hover-warning:hover {
   color: #f0ae58 !important; }
 
 .text-info {
   color: #78dcf0 !important; }
 
+.text-hover-info:hover {
+  color: #78dcf0 !important; }
+
 .text-secondary {
+  color: #606c76 !important; }
+
+.text-hover-secondary:hover {
   color: #606c76 !important; }
 
 .text-light {
   color: #f8f9fa !important; }
 
+.text-hover-light:hover {
+  color: #f8f9fa !important; }
+
 .text-dark {
+  color: #212529 !important; }
+
+.text-hover-dark:hover {
   color: #212529 !important; }
 
 .clearfix:after {
@@ -789,6 +885,8 @@ input[type="radio"].switch {
   overflow: hidden; }
   .box-group > * {
     float: left;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
     margin: 0px !important;
     border-radius: 0px !important;
     display: block;
@@ -2945,15 +3043,55 @@ html[data-loading=true] .loading {
   .bb-xl {
     border-bottom: solid 1px #d0d0d0; } }
 
-.dropdown > .content {
-  display: none;
-  position: absolute;
-  min-width: 4rem;
-  z-index: 1;
-  list-style: none;
-  text-decoration: none;
-  background: #fff; }
-
-.dropdown:hover > .content {
-  max-width: 26rem;
-  display: block; }
+button.dropdown {
+  color: #212529;
+  background: #fff;
+  border: #d0d0d0 solid 1px;
+  padding: 0px;
+  margin: 0px;
+  display: table;
+  content: "";
+  cursor: default; }
+  button.dropdown > .label {
+    padding: 1.2rem 1.2rem;
+    display: block;
+    float: left; }
+  button.dropdown::after {
+    background: #fff;
+    display: block;
+    float: left;
+    border-left: #d0d0d0 solid 1px;
+    cursor: pointer;
+    border-radius: 0px 0.25rem 0.25rem 0px;
+    width: 3.8rem;
+    padding: 1.85rem 0rem;
+    background-image: url("svg/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 30% 30%;
+    background-position: 50%;
+    content: " "; }
+  button.dropdown > .content {
+    display: none;
+    position: absolute;
+    min-width: 12rem;
+    z-index: 1;
+    list-style: none;
+    text-decoration: none;
+    background: #fff;
+    margin-top: 3.7rem;
+    border: solid 1px #d0d0d0; }
+    button.dropdown > .content > * {
+      padding: 1.2rem;
+      border-bottom: solid 1px #d0d0d0;
+      text-align: left; }
+      button.dropdown > .content > *:last-child {
+        border-bottom: 0px; }
+  button.dropdown:focus::after, button.dropdown.hover:hover::after {
+    transform: rotate(180deg);
+    border-left: 0px;
+    border-right: #d0d0d0 solid 1px; }
+  button.dropdown:focus > .content, button.dropdown.hover:hover > .content {
+    max-width: 26rem;
+    display: block; }
+  button.dropdown:hover, button.dropdown:focus, button.dropdown:active {
+    background: #fff !important; }

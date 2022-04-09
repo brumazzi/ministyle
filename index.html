@@ -17,6 +17,9 @@
       accordion = new Accordion(document.getElementById("accordion"))
       collapse = new Collapse(document.getElementById("collapse"))
       scrollInit()
+      scrollSync()
+      invalidBlankAnchor()
+
     })
   </script>
 
@@ -102,30 +105,30 @@
     <article>
       <h3>Dropdown</h3>
       <div class="flex row">
-        <div class="dropdown">
-          <span>Lorem 01</span>
+        <button class="dropdown">
+          <span class="label">Lorem 01</span>
           <ul class="content">
             <li>Lorem 01</li>
             <li>Lorem 02</li>
             <li>Lorem 03</li>
           </ul>
-        </div>
-        <div class="dropdown">
-          <span>Lorem 02</span>
+        </button>
+        <button class="dropdown">
+          <span class="label">Lorem 02</span>
+          <ul class="content">
+            <li class="bg-warning bg-hover-success">Lorem 01</li>
+            <li class="bg-warning bg-hover-danger">Lorem 02</li>
+            <li class="bg-warning bg-hover-info">Lorem 03</li>
+          </ul>
+        </button>
+        <button class="dropdown hover">
+          <span class="label">Lorem 03</span>
           <ul class="content">
             <li>Lorem 01</li>
             <li>Lorem 02</li>
             <li>Lorem 03</li>
           </ul>
-        </div>
-        <div class="dropdown">
-          <span>Lorem 03</span>
-          <ul class="content">
-            <li>Lorem 01</li>
-            <li>Lorem 02</li>
-            <li>Lorem 03</li>
-          </ul>
-        </div>
+        </button>
       </div>
     </article>
     <article>
