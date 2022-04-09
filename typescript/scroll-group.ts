@@ -17,3 +17,9 @@ window["scrollGroup"] = (): any => {
 
   return ""
 }
+
+function scrollSync(){
+  setInterval(()=>{
+    document.body.setAttribute("data-scroll", window["scrollGroup"]())
+  }, 300)
+}
