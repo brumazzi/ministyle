@@ -85,12 +85,14 @@ $color-lighten-success: lighten($color-success, 25%) !default;
 $color-lighten-danger: lighten($color-danger, 25%) !default;
 $color-lighten-warning: lighten($color-warning, 25%) !default;
 $color-lighten-info: lighten($color-info, 25%) !default;
+$color-lighten-dark: lighten($color-dark, 25%) !default;
 
 $color-darken-primary: darken($color-primary, 25%) !default;
 $color-darken-success: darken($color-success, 25%) !default;
 $color-darken-danger: darken($color-danger, 25%) !default;
 $color-darken-warning: darken($color-warning, 25%) !default;
 $color-darken-info: darken($color-info, 25%) !default;
+$color-darken-light: darken($color-light, 25%) !default;
 
 $colors: (
   "primary" $color-primary,
@@ -113,5 +115,7 @@ $dark-light-colors: (
   "darken-success" $color-darken-success,
   "darken-danger" $color-darken-danger,
   "darken-warning" $color-darken-warning,
-  "darken-info" $color-darken-info
+  "darken-info" $color-darken-info,
+  "lighten-dark" $color-lighten-dark,
+  "darken-light" $color-darken-light
 );

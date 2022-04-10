@@ -47,8 +47,8 @@ class Carousel {
             this.items.push(e);
         });
         this.index = 0;
-        this.timeout = 5;
-        this.changeIn = 5;
+        this.timeout = 10;
+        this.changeIn = 10;
         this.intervalRef = setInterval(() => {
             if (this.changeIn <= 0) {
                 this.changeIn = this.timeout;
@@ -105,7 +105,6 @@ function invalidBlankAnchor() {
     let anchors = document.querySelectorAll("a[href=''], a[href='#']");
     let i = 0;
     for (i = 0; i < anchors.length; i += 1) {
-        console.log(anchors[i]);
         anchors[i].addEventListener("click", (e) => { e.preventDefault(); });
     }
 }

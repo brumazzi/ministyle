@@ -1,7 +1,7 @@
 // Grid
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-body > .content
+body > .content, body > main > .content
   margin: 0 auto
   max-width: 112rem
   padding: 0 1rem
@@ -50,6 +50,10 @@ $flex-direction: (row, row-reverse, column, column-reverse)
   display: flex
   width: 100%
   padding: 0px
+  &.wrap
+    flex-flow: row wrap
+    &.column
+      flex-flow: column wrap
   @each $direction in $flex-direction
     &.#{$direction}
       flex-direction: $direction
