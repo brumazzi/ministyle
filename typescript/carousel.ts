@@ -17,6 +17,8 @@ class Carousel{
     this.changeIn = 10
 
     this.intervalRef = setInterval(()=>{
+      if(this.timeout === 0) return null
+
       if(this.changeIn <= 0){
         this.changeIn = this.timeout
         this.next()
