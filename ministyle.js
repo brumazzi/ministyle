@@ -21,22 +21,24 @@ class Accordion {
     }
 }
 // register async requests
-XMLHttpRequest.prototype["requests"] = 0;
+/* this function get conflict with framework that have ajax funciton */
+XMLHttpRequest.prototype["getXMLHttpRequests"] = 0;
 XMLHttpRequest.prototype["nativeSend"] = XMLHttpRequest.prototype.send;
 XMLHttpRequest.prototype.send = function (body) {
     this.onreadystatechange = function (e) {
         switch (this.readyStage) {
             case XMLHttpRequest.HEADERS_RECEIVED:
-                XMLHttpRequest["requests"] += 1;
+                XMLHttpRequest["getXMLHttpRequests"] += 1;
                 break;
             case XMLHttpRequest.DONE:
-                XMLHttpRequest["requests"] -= 1;
+                XMLHttpRequest["getXMLHttpRequests"] -= 1;
                 break;
         }
     };
+    this.nativeSend(body);
 };
 window["getAsyncRequests"] = () => {
-    return XMLHttpRequest.prototype["requests"];
+    return XMLHttpRequest.prototype["getXMLHttpRequests"];
 };
 class Carousel {
     constructor(element) {
@@ -50,6 +52,8 @@ class Carousel {
         this.timeout = 10;
         this.changeIn = 10;
         this.intervalRef = setInterval(() => {
+            if (this.timeout === 0)
+                return null;
             if (this.changeIn <= 0) {
                 this.changeIn = this.timeout;
                 this.next();
@@ -64,18 +68,16 @@ class Carousel {
     }
     next() {
         this.items[this.index].classList.remove('active');
-        this.items[this.index].classList.add('hide');
         this.index = (this.index + 1) % this.items.length;
-        this.items[this.index].classList.remove('hide');
         this.items[this.index].classList.add('active');
         this.changeIn = this.timeout;
     }
     prev() {
-        this.items[this.items.length - (this.index + 1)].classList.remove('active');
-        this.items[this.index].classList.add('hide');
-        this.index = (this.index + 1) % this.items.length;
-        this.items[this.index].classList.remove('hide');
-        this.items[this.items.length - (this.index + 1)].classList.add('active');
+        this.items[this.index].classList.remove('active');
+        this.index -= 1;
+        if (this.index < 0)
+            this.index = this.items.length - 1;
+        this.items[this.index].classList.add('active');
         this.changeIn = this.timeout;
     }
 }
