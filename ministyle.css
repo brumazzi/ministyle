@@ -927,16 +927,10 @@ body > .content, body > main > .content {
   width: 100%; }
   .row > [class*="column-"],
   .flex > [class*="column-"] {
-    padding: 0px 0rem;
+    padding: 0rem 0.6rem;
     display: block;
     margin: 0px;
     border: 0px; }
-    .row > [class*="column-"]:first-child,
-    .flex > [class*="column-"]:first-child {
-      padding-left: 0px; }
-    .row > [class*="column-"]:last-child,
-    .flex > [class*="column-"]:last-child {
-      padding-right: 0px; }
   @media only screen and (max-width: 576px) {
     .row > [class*="column-"],
     .flex > [class*="column-"] {
@@ -2288,7 +2282,11 @@ table {
   display: block;
   overflow-x: auto;
   text-align: left;
-  width: 100%; }
+  width: 100%;
+  line-height: 1.0rem; }
+
+th {
+  text-transform: uppercase; }
 
 td, th {
   border-bottom: 0.1rem solid #e1e1e1;
