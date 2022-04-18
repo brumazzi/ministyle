@@ -2910,23 +2910,27 @@ html[data-loading=true] .loading {
 
 @-webkit-keyframes animation-show {
   0% {
-    opacity: 0;
-    position: relative;
-    width: 100%; }
+    opacity: 0; }
   100% {
-    opacity: 1;
-    position: relative;
-    width: 100%; } }
+    opacity: 1; } }
 
 @keyframes animation-show {
   0% {
-    opacity: 0;
-    position: relative;
-    width: 100%; }
+    opacity: 0; }
   100% {
-    opacity: 1;
-    position: relative;
-    width: 100%; } }
+    opacity: 1; } }
+
+@-webkit-keyframes animation-right2left {
+  0% {
+    margin-left: 100%; }
+  100% {
+    margin-left: 0px; } }
+
+@keyframes animation-right2left {
+  0% {
+    margin-left: 100%; }
+  100% {
+    margin-left: 0px; } }
 
 .carousel {
   display: block;
@@ -2944,6 +2948,9 @@ html[data-loading=true] .loading {
 
 .carousel[data-transition="opacity"] > .content > *.active {
   animation: animation-show 2.5s; }
+
+.carousel[data-transition="right2left"] > .content > *.active {
+  animation: animation-right2left 1s; }
 
 .b {
   border: solid 1px #d0d0d0 !important; }

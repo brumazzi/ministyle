@@ -68,15 +68,19 @@ class Carousel {
     }
     next() {
         this.items[this.index].classList.remove('active');
+        this.items[this.index].classList.add('hide');
         this.index = (this.index + 1) % this.items.length;
+        this.items[this.index].classList.remove('hide');
         this.items[this.index].classList.add('active');
         this.changeIn = this.timeout;
     }
     prev() {
         this.items[this.index].classList.remove('active');
+        this.items[this.index].classList.add('hide');
         this.index -= 1;
         if (this.index < 0)
             this.index = this.items.length - 1;
+        this.items[this.index].classList.remove('hide');
         this.items[this.index].classList.add('active');
         this.changeIn = this.timeout;
     }
