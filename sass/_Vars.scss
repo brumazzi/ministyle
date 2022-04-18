@@ -34,21 +34,8 @@ $navbar-z-index: 20;
 $modal-z-index: 100;
 
 $row-division: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
-// $row-division: (
-//   "1": 10%,
-//   "2": 20%,
-//   "2-5": 25%,
-//   "3": 30%,
-//   "4": 40%,
-//   "5": 50%,
-//   "6": 60%,
-//   "7": 70%,
-//   "7-5": 75%,
-//   "8": 80%,
-//   "9": 90%,
-//   "10": 100%,
-// );
-
+$column-padding-y: 0.0rem;
+$column-padding-x: 0.6rem;
 $justify-contents: (
   "center": center,
   "end": end,
