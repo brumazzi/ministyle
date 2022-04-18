@@ -32,15 +32,15 @@ body > .content, body > main > .content
     & > [class*="column-"]
       width: 100% !important
 
-  @each $column-name, $column-size in $row-division
-    & > .column-#{$column-name}
-      width: $column-size
+  @each $column-size in $row-division
+    & > .column-#{$column-size}
+      width: #{100%/12*$column-size}
 
   @each $screen-name, $screen-size in $screens
     @media only screen and (min-width: $screen-size)
-      @each $column-name, $column-size in $row-division
-        & > .column-#{$screen-name}-#{$column-name}
-          width: $column-size
+      @each $column-size in $row-division
+        & > .column-#{$screen-name}-#{$column-size}
+          width: #{100%/12*$column-size}
 
 $flex-direction: (row, row-reverse, column, column-reverse)
 // $flex-align: (flex-start, flex-end, center, stretch, baseline)
