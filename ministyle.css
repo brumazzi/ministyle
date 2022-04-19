@@ -553,8 +553,7 @@ blockquote {
   blockquote *:last-child {
     margin-bottom: 0; }
 
-.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
-  border: 0.1rem solid;
+.button {
   background-color: #6495ed;
   border: 0.1rem solid #6495ed;
   border-radius: 0.4rem;
@@ -569,160 +568,160 @@ blockquote {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap; }
-  .button.outline, button.outline, input[type="button"].outline, input[type="reset"].outline, input[type="submit"].outline {
+  .button.outline {
     background-color: transparent !important;
     border: 0.1rem solid #6495ed;
     color: #6495ed; }
-  .button:not([disabled]):focus, .button:not([disabled]):hover, button:not([disabled]):focus, button:not([disabled]):hover, input[type="button"]:not([disabled]):focus, input[type="button"]:not([disabled]):hover, input[type="reset"]:not([disabled]):focus, input[type="reset"]:not([disabled]):hover, input[type="submit"]:not([disabled]):focus, input[type="submit"]:not([disabled]):hover {
+  .button:not([disabled]):focus, .button:not([disabled]):hover {
     background-color: #a9c4f5 !important;
     outline: 0; }
-  .button:not([disabled]):active, button:not([disabled]):active, input[type="button"]:not([disabled]):active, input[type="reset"]:not([disabled]):active, input[type="submit"]:not([disabled]):active {
+  .button:not([disabled]):active {
     background-color: #4d85ea !important; }
-  .button.primary:not([disabled]), button.primary:not([disabled]), input[type="button"].primary:not([disabled]), input[type="reset"].primary:not([disabled]), input[type="submit"].primary:not([disabled]) {
+  .button.primary:not([disabled]) {
     background-color: #6495ed !important;
     color: #f8f9fa;
     border-color: #1f66e5 !important; }
-    .button.primary:not([disabled]):focus, .button.primary:not([disabled]):hover, button.primary:not([disabled]):focus, button.primary:not([disabled]):hover, input[type="button"].primary:not([disabled]):focus, input[type="button"].primary:not([disabled]):hover, input[type="reset"].primary:not([disabled]):focus, input[type="reset"].primary:not([disabled]):hover, input[type="submit"].primary:not([disabled]):focus, input[type="submit"].primary:not([disabled]):hover {
+    .button.primary:not([disabled]):focus, .button.primary:not([disabled]):hover {
       background-color: #a9c4f5 !important;
       outline: 0; }
-    .button.primary:not([disabled]):active, button.primary:not([disabled]):active, input[type="button"].primary:not([disabled]):active, input[type="reset"].primary:not([disabled]):active, input[type="submit"].primary:not([disabled]):active {
+    .button.primary:not([disabled]):active {
       background-color: #4d85ea !important; }
-    .button.primary:not([disabled]).outline, button.primary:not([disabled]).outline, input[type="button"].primary:not([disabled]).outline, input[type="reset"].primary:not([disabled]).outline, input[type="submit"].primary:not([disabled]).outline {
+    .button.primary:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #6495ed !important;
       color: #6495ed !important; }
-      .button.primary:not([disabled]).outline:focus, .button.primary:not([disabled]).outline:hover, button.primary:not([disabled]).outline:focus, button.primary:not([disabled]).outline:hover, input[type="button"].primary:not([disabled]).outline:focus, input[type="button"].primary:not([disabled]).outline:hover, input[type="reset"].primary:not([disabled]).outline:focus, input[type="reset"].primary:not([disabled]).outline:hover, input[type="submit"].primary:not([disabled]).outline:focus, input[type="submit"].primary:not([disabled]).outline:hover {
+      .button.primary:not([disabled]).outline:focus, .button.primary:not([disabled]).outline:hover {
         background-color: #a9c4f5 !important;
         outline: 0; }
-      .button.primary:not([disabled]).outline:active, button.primary:not([disabled]).outline:active, input[type="button"].primary:not([disabled]).outline:active, input[type="reset"].primary:not([disabled]).outline:active, input[type="submit"].primary:not([disabled]).outline:active {
+      .button.primary:not([disabled]).outline:active {
         background-color: #4d85ea !important; }
-  .button.success:not([disabled]), button.success:not([disabled]), input[type="button"].success:not([disabled]), input[type="reset"].success:not([disabled]), input[type="submit"].success:not([disabled]) {
+  .button.success:not([disabled]) {
     background-color: #43ac7c !important;
     color: #f8f9fa;
     border-color: #2e7554 !important; }
-    .button.success:not([disabled]):focus, .button.success:not([disabled]):hover, button.success:not([disabled]):focus, button.success:not([disabled]):hover, input[type="button"].success:not([disabled]):focus, input[type="button"].success:not([disabled]):hover, input[type="reset"].success:not([disabled]):focus, input[type="reset"].success:not([disabled]):hover, input[type="submit"].success:not([disabled]):focus, input[type="submit"].success:not([disabled]):hover {
+    .button.success:not([disabled]):focus, .button.success:not([disabled]):hover {
       background-color: #73c8a1 !important;
       outline: 0; }
-    .button.success:not([disabled]):active, button.success:not([disabled]):active, input[type="button"].success:not([disabled]):active, input[type="reset"].success:not([disabled]):active, input[type="submit"].success:not([disabled]):active {
+    .button.success:not([disabled]):active {
       background-color: #3c9a6f !important; }
-    .button.success:not([disabled]).outline, button.success:not([disabled]).outline, input[type="button"].success:not([disabled]).outline, input[type="reset"].success:not([disabled]).outline, input[type="submit"].success:not([disabled]).outline {
+    .button.success:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #43ac7c !important;
       color: #43ac7c !important; }
-      .button.success:not([disabled]).outline:focus, .button.success:not([disabled]).outline:hover, button.success:not([disabled]).outline:focus, button.success:not([disabled]).outline:hover, input[type="button"].success:not([disabled]).outline:focus, input[type="button"].success:not([disabled]).outline:hover, input[type="reset"].success:not([disabled]).outline:focus, input[type="reset"].success:not([disabled]).outline:hover, input[type="submit"].success:not([disabled]).outline:focus, input[type="submit"].success:not([disabled]).outline:hover {
+      .button.success:not([disabled]).outline:focus, .button.success:not([disabled]).outline:hover {
         background-color: #73c8a1 !important;
         outline: 0; }
-      .button.success:not([disabled]).outline:active, button.success:not([disabled]).outline:active, input[type="button"].success:not([disabled]).outline:active, input[type="reset"].success:not([disabled]).outline:active, input[type="submit"].success:not([disabled]).outline:active {
+      .button.success:not([disabled]).outline:active {
         background-color: #3c9a6f !important; }
-  .button.danger:not([disabled]), button.danger:not([disabled]), input[type="button"].danger:not([disabled]), input[type="reset"].danger:not([disabled]), input[type="submit"].danger:not([disabled]) {
+  .button.danger:not([disabled]) {
     background-color: #cc5656 !important;
     color: #f8f9fa;
     border-color: #a43131 !important; }
-    .button.danger:not([disabled]):focus, .button.danger:not([disabled]):hover, button.danger:not([disabled]):focus, button.danger:not([disabled]):hover, input[type="button"].danger:not([disabled]):focus, input[type="button"].danger:not([disabled]):hover, input[type="reset"].danger:not([disabled]):focus, input[type="reset"].danger:not([disabled]):hover, input[type="submit"].danger:not([disabled]):focus, input[type="submit"].danger:not([disabled]):hover {
+    .button.danger:not([disabled]):focus, .button.danger:not([disabled]):hover {
       background-color: #de9191 !important;
       outline: 0; }
-    .button.danger:not([disabled]):active, button.danger:not([disabled]):active, input[type="button"].danger:not([disabled]):active, input[type="reset"].danger:not([disabled]):active, input[type="submit"].danger:not([disabled]):active {
+    .button.danger:not([disabled]):active {
       background-color: #c64242 !important; }
-    .button.danger:not([disabled]).outline, button.danger:not([disabled]).outline, input[type="button"].danger:not([disabled]).outline, input[type="reset"].danger:not([disabled]).outline, input[type="submit"].danger:not([disabled]).outline {
+    .button.danger:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #cc5656 !important;
       color: #cc5656 !important; }
-      .button.danger:not([disabled]).outline:focus, .button.danger:not([disabled]).outline:hover, button.danger:not([disabled]).outline:focus, button.danger:not([disabled]).outline:hover, input[type="button"].danger:not([disabled]).outline:focus, input[type="button"].danger:not([disabled]).outline:hover, input[type="reset"].danger:not([disabled]).outline:focus, input[type="reset"].danger:not([disabled]).outline:hover, input[type="submit"].danger:not([disabled]).outline:focus, input[type="submit"].danger:not([disabled]).outline:hover {
+      .button.danger:not([disabled]).outline:focus, .button.danger:not([disabled]).outline:hover {
         background-color: #de9191 !important;
         outline: 0; }
-      .button.danger:not([disabled]).outline:active, button.danger:not([disabled]).outline:active, input[type="button"].danger:not([disabled]).outline:active, input[type="reset"].danger:not([disabled]).outline:active, input[type="submit"].danger:not([disabled]).outline:active {
+      .button.danger:not([disabled]).outline:active {
         background-color: #c64242 !important; }
-  .button.warning:not([disabled]), button.warning:not([disabled]), input[type="button"].warning:not([disabled]), input[type="reset"].warning:not([disabled]), input[type="submit"].warning:not([disabled]) {
+  .button.warning:not([disabled]) {
     background-color: #f0ae58 !important;
     color: #f8f9fa;
     border-color: #e78c15 !important; }
-    .button.warning:not([disabled]):focus, .button.warning:not([disabled]):hover, button.warning:not([disabled]):focus, button.warning:not([disabled]):hover, input[type="button"].warning:not([disabled]):focus, input[type="button"].warning:not([disabled]):hover, input[type="reset"].warning:not([disabled]):focus, input[type="reset"].warning:not([disabled]):hover, input[type="submit"].warning:not([disabled]):focus, input[type="submit"].warning:not([disabled]):hover {
+    .button.warning:not([disabled]):focus, .button.warning:not([disabled]):hover {
       background-color: #f6d09e !important;
       outline: 0; }
-    .button.warning:not([disabled]):active, button.warning:not([disabled]):active, input[type="button"].warning:not([disabled]):active, input[type="reset"].warning:not([disabled]):active, input[type="submit"].warning:not([disabled]):active {
+    .button.warning:not([disabled]):active {
       background-color: #eea341 !important; }
-    .button.warning:not([disabled]).outline, button.warning:not([disabled]).outline, input[type="button"].warning:not([disabled]).outline, input[type="reset"].warning:not([disabled]).outline, input[type="submit"].warning:not([disabled]).outline {
+    .button.warning:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #f0ae58 !important;
       color: #f0ae58 !important; }
-      .button.warning:not([disabled]).outline:focus, .button.warning:not([disabled]).outline:hover, button.warning:not([disabled]).outline:focus, button.warning:not([disabled]).outline:hover, input[type="button"].warning:not([disabled]).outline:focus, input[type="button"].warning:not([disabled]).outline:hover, input[type="reset"].warning:not([disabled]).outline:focus, input[type="reset"].warning:not([disabled]).outline:hover, input[type="submit"].warning:not([disabled]).outline:focus, input[type="submit"].warning:not([disabled]).outline:hover {
+      .button.warning:not([disabled]).outline:focus, .button.warning:not([disabled]).outline:hover {
         background-color: #f6d09e !important;
         outline: 0; }
-      .button.warning:not([disabled]).outline:active, button.warning:not([disabled]).outline:active, input[type="button"].warning:not([disabled]).outline:active, input[type="reset"].warning:not([disabled]).outline:active, input[type="submit"].warning:not([disabled]).outline:active {
+      .button.warning:not([disabled]).outline:active {
         background-color: #eea341 !important; }
-  .button.info:not([disabled]), button.info:not([disabled]), input[type="button"].info:not([disabled]), input[type="reset"].info:not([disabled]), input[type="submit"].info:not([disabled]) {
+  .button.info:not([disabled]) {
     background-color: #78dcf0 !important;
     color: #f8f9fa;
     border-color: #33cae8 !important; }
-    .button.info:not([disabled]):focus, .button.info:not([disabled]):hover, button.info:not([disabled]):focus, button.info:not([disabled]):hover, input[type="button"].info:not([disabled]):focus, input[type="button"].info:not([disabled]):hover, input[type="reset"].info:not([disabled]):focus, input[type="reset"].info:not([disabled]):hover, input[type="submit"].info:not([disabled]):focus, input[type="submit"].info:not([disabled]):hover {
+    .button.info:not([disabled]):focus, .button.info:not([disabled]):hover {
       background-color: #bdeef8 !important;
       outline: 0; }
-    .button.info:not([disabled]):active, button.info:not([disabled]):active, input[type="button"].info:not([disabled]):active, input[type="reset"].info:not([disabled]):active, input[type="submit"].info:not([disabled]):active {
+    .button.info:not([disabled]):active {
       background-color: #61d6ed !important; }
-    .button.info:not([disabled]).outline, button.info:not([disabled]).outline, input[type="button"].info:not([disabled]).outline, input[type="reset"].info:not([disabled]).outline, input[type="submit"].info:not([disabled]).outline {
+    .button.info:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #78dcf0 !important;
       color: #78dcf0 !important; }
-      .button.info:not([disabled]).outline:focus, .button.info:not([disabled]).outline:hover, button.info:not([disabled]).outline:focus, button.info:not([disabled]).outline:hover, input[type="button"].info:not([disabled]).outline:focus, input[type="button"].info:not([disabled]).outline:hover, input[type="reset"].info:not([disabled]).outline:focus, input[type="reset"].info:not([disabled]).outline:hover, input[type="submit"].info:not([disabled]).outline:focus, input[type="submit"].info:not([disabled]).outline:hover {
+      .button.info:not([disabled]).outline:focus, .button.info:not([disabled]).outline:hover {
         background-color: #bdeef8 !important;
         outline: 0; }
-      .button.info:not([disabled]).outline:active, button.info:not([disabled]).outline:active, input[type="button"].info:not([disabled]).outline:active, input[type="reset"].info:not([disabled]).outline:active, input[type="submit"].info:not([disabled]).outline:active {
+      .button.info:not([disabled]).outline:active {
         background-color: #61d6ed !important; }
-  .button.secondary:not([disabled]), button.secondary:not([disabled]), input[type="button"].secondary:not([disabled]), input[type="reset"].secondary:not([disabled]), input[type="submit"].secondary:not([disabled]) {
+  .button.secondary:not([disabled]) {
     background-color: #606c76 !important;
     color: #f8f9fa;
     border-color: #3e454c !important; }
-    .button.secondary:not([disabled]):focus, .button.secondary:not([disabled]):hover, button.secondary:not([disabled]):focus, button.secondary:not([disabled]):hover, input[type="button"].secondary:not([disabled]):focus, input[type="button"].secondary:not([disabled]):hover, input[type="reset"].secondary:not([disabled]):focus, input[type="reset"].secondary:not([disabled]):hover, input[type="submit"].secondary:not([disabled]):focus, input[type="submit"].secondary:not([disabled]):hover {
+    .button.secondary:not([disabled]):focus, .button.secondary:not([disabled]):hover {
       background-color: #86929d !important;
       outline: 0; }
-    .button.secondary:not([disabled]):active, button.secondary:not([disabled]):active, input[type="button"].secondary:not([disabled]):active, input[type="reset"].secondary:not([disabled]):active, input[type="submit"].secondary:not([disabled]):active {
+    .button.secondary:not([disabled]):active {
       background-color: #555f68 !important; }
-    .button.secondary:not([disabled]).outline, button.secondary:not([disabled]).outline, input[type="button"].secondary:not([disabled]).outline, input[type="reset"].secondary:not([disabled]).outline, input[type="submit"].secondary:not([disabled]).outline {
+    .button.secondary:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #606c76 !important;
       color: #606c76 !important; }
-      .button.secondary:not([disabled]).outline:focus, .button.secondary:not([disabled]).outline:hover, button.secondary:not([disabled]).outline:focus, button.secondary:not([disabled]).outline:hover, input[type="button"].secondary:not([disabled]).outline:focus, input[type="button"].secondary:not([disabled]).outline:hover, input[type="reset"].secondary:not([disabled]).outline:focus, input[type="reset"].secondary:not([disabled]).outline:hover, input[type="submit"].secondary:not([disabled]).outline:focus, input[type="submit"].secondary:not([disabled]).outline:hover {
+      .button.secondary:not([disabled]).outline:focus, .button.secondary:not([disabled]).outline:hover {
         background-color: #86929d !important;
         outline: 0; }
-      .button.secondary:not([disabled]).outline:active, button.secondary:not([disabled]).outline:active, input[type="button"].secondary:not([disabled]).outline:active, input[type="reset"].secondary:not([disabled]).outline:active, input[type="submit"].secondary:not([disabled]).outline:active {
+      .button.secondary:not([disabled]).outline:active {
         background-color: #555f68 !important; }
-  .button.light:not([disabled]), button.light:not([disabled]), input[type="button"].light:not([disabled]), input[type="reset"].light:not([disabled]), input[type="submit"].light:not([disabled]) {
+  .button.light:not([disabled]) {
     background-color: #f8f9fa !important;
     color: #f8f9fa;
     border-color: #cbd3da !important; }
-    .button.light:not([disabled]):focus, .button.light:not([disabled]):hover, button.light:not([disabled]):focus, button.light:not([disabled]):hover, input[type="button"].light:not([disabled]):focus, input[type="button"].light:not([disabled]):hover, input[type="reset"].light:not([disabled]):focus, input[type="reset"].light:not([disabled]):hover, input[type="submit"].light:not([disabled]):focus, input[type="submit"].light:not([disabled]):hover {
+    .button.light:not([disabled]):focus, .button.light:not([disabled]):hover {
       background-color: white !important;
       outline: 0; }
-    .button.light:not([disabled]):active, button.light:not([disabled]):active, input[type="button"].light:not([disabled]):active, input[type="reset"].light:not([disabled]):active, input[type="submit"].light:not([disabled]):active {
+    .button.light:not([disabled]):active {
       background-color: #e9ecef !important; }
-    .button.light:not([disabled]).outline, button.light:not([disabled]).outline, input[type="button"].light:not([disabled]).outline, input[type="reset"].light:not([disabled]).outline, input[type="submit"].light:not([disabled]).outline {
+    .button.light:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #f8f9fa !important;
       color: #f8f9fa !important; }
-      .button.light:not([disabled]).outline:focus, .button.light:not([disabled]).outline:hover, button.light:not([disabled]).outline:focus, button.light:not([disabled]).outline:hover, input[type="button"].light:not([disabled]).outline:focus, input[type="button"].light:not([disabled]).outline:hover, input[type="reset"].light:not([disabled]).outline:focus, input[type="reset"].light:not([disabled]).outline:hover, input[type="submit"].light:not([disabled]).outline:focus, input[type="submit"].light:not([disabled]).outline:hover {
+      .button.light:not([disabled]).outline:focus, .button.light:not([disabled]).outline:hover {
         background-color: white !important;
         outline: 0; }
-      .button.light:not([disabled]).outline:active, button.light:not([disabled]).outline:active, input[type="button"].light:not([disabled]).outline:active, input[type="reset"].light:not([disabled]).outline:active, input[type="submit"].light:not([disabled]).outline:active {
+      .button.light:not([disabled]).outline:active {
         background-color: #e9ecef !important; }
-  .button.dark:not([disabled]), button.dark:not([disabled]), input[type="button"].dark:not([disabled]), input[type="reset"].dark:not([disabled]), input[type="submit"].dark:not([disabled]) {
+  .button.dark:not([disabled]) {
     background-color: #212529 !important;
     color: #f8f9fa;
     border-color: black !important; }
-    .button.dark:not([disabled]):focus, .button.dark:not([disabled]):hover, button.dark:not([disabled]):focus, button.dark:not([disabled]):hover, input[type="button"].dark:not([disabled]):focus, input[type="button"].dark:not([disabled]):hover, input[type="reset"].dark:not([disabled]):focus, input[type="reset"].dark:not([disabled]):hover, input[type="submit"].dark:not([disabled]):focus, input[type="submit"].dark:not([disabled]):hover {
+    .button.dark:not([disabled]):focus, .button.dark:not([disabled]):hover {
       background-color: #434b53 !important;
       outline: 0; }
-    .button.dark:not([disabled]):active, button.dark:not([disabled]):active, input[type="button"].dark:not([disabled]):active, input[type="reset"].dark:not([disabled]):active, input[type="submit"].dark:not([disabled]):active {
+    .button.dark:not([disabled]):active {
       background-color: #16181b !important; }
-    .button.dark:not([disabled]).outline, button.dark:not([disabled]).outline, input[type="button"].dark:not([disabled]).outline, input[type="reset"].dark:not([disabled]).outline, input[type="submit"].dark:not([disabled]).outline {
+    .button.dark:not([disabled]).outline {
       background-color: transparent !important;
       border-color: #212529 !important;
       color: #212529 !important; }
-      .button.dark:not([disabled]).outline:focus, .button.dark:not([disabled]).outline:hover, button.dark:not([disabled]).outline:focus, button.dark:not([disabled]).outline:hover, input[type="button"].dark:not([disabled]).outline:focus, input[type="button"].dark:not([disabled]).outline:hover, input[type="reset"].dark:not([disabled]).outline:focus, input[type="reset"].dark:not([disabled]).outline:hover, input[type="submit"].dark:not([disabled]).outline:focus, input[type="submit"].dark:not([disabled]).outline:hover {
+      .button.dark:not([disabled]).outline:focus, .button.dark:not([disabled]).outline:hover {
         background-color: #434b53 !important;
         outline: 0; }
-      .button.dark:not([disabled]).outline:active, button.dark:not([disabled]).outline:active, input[type="button"].dark:not([disabled]).outline:active, input[type="reset"].dark:not([disabled]).outline:active, input[type="submit"].dark:not([disabled]).outline:active {
+      .button.dark:not([disabled]).outline:active {
         background-color: #16181b !important; }
-  .button[disabled], button[disabled], input[type="button"][disabled], input[type="reset"][disabled], input[type="submit"][disabled] {
+  .button[disabled] {
     cursor: default;
     background-color: #606c76;
     border-color: #606c76;
@@ -901,8 +900,9 @@ input[type="radio"].switch {
   overflow: hidden; }
   .box-group > * {
     float: left;
-    padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: auto;
     margin: 0px !important;
     border-radius: 0px !important;
     display: block;
@@ -3080,9 +3080,11 @@ button.dropdown {
   margin: 0px;
   display: table ruby;
   content: "";
-  cursor: default; }
+  cursor: default;
+  border-radius: 0.25rem;
+  overflow: hidden; }
   button.dropdown > .label {
-    padding: 1.2rem 1.2rem;
+    padding: 0.9rem 1rem;
     display: block;
     float: left; }
   button.dropdown::after {
