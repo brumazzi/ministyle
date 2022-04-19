@@ -66,6 +66,11 @@ class Carousel {
         this.timeout = interval;
         this.changeIn = interval;
     }
+    setIndex(index) {
+        this.items[this.index].classList.remove('active');
+        this.index = Math.abs(index) % this.items.length;
+        this.items[this.index].classList.add('active');
+    }
     next() {
         this.items[this.index].classList.remove('active');
         this.index = (this.index + 1) % this.items.length;

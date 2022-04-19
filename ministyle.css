@@ -2600,7 +2600,7 @@ nav.navbar {
       position: relative;
       top: 3vh;
       margin-bottom: 3vh;
-      height: 90vh; }
+      max-height: 90vh; }
 
 .alert {
   padding: 1rem;
