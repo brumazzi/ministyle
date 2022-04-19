@@ -17,7 +17,7 @@ body > .content, body > main > .content
 .flex
   padding: 0px
   width: 100%
-  & > [class*="column-"]
+  &.not(.no-column-padding) > [class*="column-"]
     padding: $column-padding-y $column-padding-x
     display: block
     margin: 0px
