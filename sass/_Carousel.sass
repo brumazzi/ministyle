@@ -13,7 +13,32 @@
 .carousel
   display: block
   width: $carousel-width
-  overflow: auto
+  overflow: hidden
+  position: relative
+  & button
+    border: none
+    outline: none
+    background: transparent
+    margin: 0px
+    padding: 0px 3rem
+    height: 100%
+    display: block
+    position: absolute
+    top: 0px
+    z-index: 2
+    background-size: 3rem
+    background-repeat: no-repeat
+    background-position: 50%
+    &:hover
+      background-color: $color-transparent-dark
+    &.left
+      left: 0px
+      background-image: url($asset-svg-path+"/angle-left-solid.svg")
+
+    &.right
+      right: 0px
+      background-image: url($asset-svg-path+"/angle-right-solid.svg")
+
   & > .content
     display: block
     overflow: hidden

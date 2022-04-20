@@ -2926,7 +2926,30 @@ html[data-loading=true] .loading {
 .carousel {
   display: block;
   width: 100%;
-  overflow: auto; }
+  overflow: hidden;
+  position: relative; }
+  .carousel button {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin: 0px;
+    padding: 0px 3rem;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    background-position: 50%; }
+    .carousel button:hover {
+      background-color: #00000041; }
+    .carousel button.left {
+      left: 0px;
+      background-image: url("/assets/ministyle/svg/angle-left-solid.svg"); }
+    .carousel button.right {
+      right: 0px;
+      background-image: url("/assets/ministyle/svg/angle-right-solid.svg"); }
   .carousel > .content {
     display: block;
     overflow: hidden;
