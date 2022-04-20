@@ -13,11 +13,10 @@ body > .content, body > main > .content
   & > [class*="column-"]
     float: left
 
-.row,
-.flex
+.row,.flex
   padding: 0px
   width: 100%
-  &.not(.no-column-padding) > [class*="column-"]
+  &:not(.no-column-padding) > [class*="column-"]
     padding: $column-padding-y $column-padding-x
     display: block
     margin: 0px
@@ -65,7 +64,8 @@ $flex-direction: (row, row-reverse, column, column-reverse)
   //
 
   @media only screen and (max-width: 576px)
-    flex-direction: column !important
+    &:not(.row)
+      flex-direction: column !important
 
   @media only screen and (max-width: 576px)
     .column-reverse

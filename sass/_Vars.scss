@@ -58,6 +58,7 @@ $color-secondary: #606c76 !default;
 $color-tertiary: #f4f5f6 !default;
 $color-quaternary: #d1d1d1 !default;
 $color-quinary: #e1e1e1 !default;
+$color-muted: #959595 !default;
 
 $color-success: #43ac7c !default;
 $color-danger: #cc5656 !default;
@@ -92,7 +93,8 @@ $colors: (
   "info" $color-info,
   "secondary" $color-secondary,
   "light" $color-light,
-  "dark" $color-dark
+  "dark" $color-dark,
+  "muted" $color-muted
 );
 
 $dark-light-colors: (
