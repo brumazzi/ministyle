@@ -24,29 +24,20 @@
 .shadow
   box-shadow: 0 0 10px $color-transparent-dark !important
 
-.w-25
-  width: 25% !important
+@each $size in $porcent-size
+  .w-#{$size}
+    width: $size*1% !important
 
-.w-50
-  width: 50% !important
+  .h-#{$size}
+    height: $size*1% !important
+@each $screen-name, $screen-size in $screens
+  @media only screen and (min-width: $screen-size)
+    @each $size in $porcent-size
+      .w-#{$screen-name}-#{$size}
+        width: $size*1% !important
 
-.w-75
-  width: 75% !important
-
-.w-100
-  width: 100% !important
-
-.h-25
-  height: 25% !important
-
-.h-50
-  height: 50% !important
-
-.h-75
-  height: 75% !important
-
-.h-100
-  height: 100% !important
+      .h-#{$screen-name}-#{$size}
+        height: $size*1% !important
 
 $overflows: (hidden, auto)
 @each $overflow in $overflows

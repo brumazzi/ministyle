@@ -4,7 +4,9 @@ $border-radius: 0.25rem;
 
 $carousel-width: 100%;
 
-$space-sizes: (0, 1, 2, 3, 4, 5);
+$margin-position: 2rem;
+
+$space-sizes: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
 $directions: (
   "l": "left",
   "t": "top",
@@ -12,12 +14,14 @@ $directions: (
   "b": "bottom",
 );
 
+$screen-xs: 120px;
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 
 $screens: (
+  "xs": $screen-xs,
   "sm": $screen-sm,
   "md": $screen-md,
   "lg": $screen-lg,
@@ -51,6 +55,12 @@ $align-items: (
   "start": flex-start,
   "stretch": stretch,
 );
+
+$flex-direction: (row, row-reverse, column, column-reverse);
+// $flex-align: (flex-start, flex-end, center, stretch, baseline);
+// $flex-column-align: (flex-start, flex-end, center);
+
+$porcent-size: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70, 75, 80, 85, 90, 95, 100);
 
 $asset-svg-path: "/assets/ministyle/svg";
 
