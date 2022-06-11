@@ -5932,31 +5932,31 @@ button.dropdown {
   button.dropdown:hover, button.dropdown:focus, button.dropdown:active {
     background: #fff !important; }
 
-.position .absolute {
+.position.absolute {
   position: absolute; }
 
-.position .relative {
+.position.relative {
   position: relative; }
 
-.position .fixed {
+.position.fixed {
   position: fixed; }
 
-.position .top {
+.position.top {
   top: 2rem; }
 
-.position .bottom {
+.position.bottom {
   bottom: 2rem; }
 
-.position .left {
+.position.left {
   left: 2rem; }
 
-.position .right {
+.position.right {
   right: 2rem; }
 
-.position .center-h {
+.position.center-h {
   left: 50%;
   transform: translateX(-50%); }
 
-.position .center-v {
+.position.center-v {
   top: 50%;
   transform: translateY(-50%); }
