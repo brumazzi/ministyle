@@ -43,8 +43,8 @@ body > .content, body > main > .content
   padding: 0px
   &.wrap
     flex-flow: row wrap
-    &.column
-      flex-flow: column wrap
+  &.column
+    flex-flow: column
   @each $direction in $flex-direction
     &.#{$direction}
       flex-direction: $direction

@@ -3,7 +3,7 @@
 
 .button
   background-color: $color-primary
-  border: 0.1rem solid $color-primary
+  border: 0rem
   border-radius: 0.4rem
   color: $color-light
   cursor: pointer
@@ -20,14 +20,24 @@
   white-space: nowrap
   &.outline
     background-color: transparent !important
-    border: 0.1rem solid $color-primary
+    outline: 0.1rem solid $color-primary
     color: $color-primary
+
+  &.icon
+    font-size: 2rem
+    padding: 1rem !important
+    & > *
+      display: block
+      width: 2rem
+      height: 2rem
+
+  &.circle
+    border-radius: 100%
 
   &:not([disabled])
     &:focus,
-    &:hover
+    &:hover:not(.no-hover)
       background-color: lighten($color-primary, 15%) !important
-      outline: 0
 
     &:active
       background-color: darken($color-primary, 5%) !important
@@ -36,23 +46,20 @@
     &.#{$name}:not([disabled])
       background-color: $color !important
       color: $color-light
-      border-color: darken($color, 15%) !important
       &:focus,
-      &:hover
+      &:hover:not(.no-hover)
         background-color: lighten($color, 15%) !important
-        outline: 0
 
       &:active
         background-color: darken($color, 5%) !important
 
       &.outline
+        outline-color: darken($color, 15%)
         background-color: transparent !important
-        border-color: $color !important
         color: $color !important
         &:focus,
         &:hover
           background-color: lighten($color, 15%) !important
-          outline: 0
 
         &:active
           background-color: darken($color, 5%) !important
