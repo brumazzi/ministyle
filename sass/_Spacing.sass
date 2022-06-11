@@ -24,6 +24,7 @@
     margin-top: #{$space}rem !important
     margin-bottom: #{$space}rem !important
 
+@each $space in $space-sizes
   @each $direction, $controller in $directions
     .p#{$direction}-#{$space}
       padding-#{$controller}: #{$space}rem !important
@@ -56,6 +57,9 @@
         margin-top: #{$space}rem !important
         margin-bottom: #{$space}rem !important
 
+@each $screen-name, $screen-size in $screens
+  @media only screen and (min-width: $screen-size)
+    @each $space in $space-sizes
       @each $direction, $controller in $directions
         .p#{$direction}-#{$screen-name}-#{$space}
           padding-#{$controller}: #{$space}rem !important
