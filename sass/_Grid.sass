@@ -1,22 +1,17 @@
 // Grid
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-body > .content, body > main > .content
-  margin: 0 auto
-  padding: 0 1rem
-  position: relative
-  width: 100%
-  @media only screen and (min-width: $screen-md)
-    max-width: 112rem
-
-.row:not(.flex)
-  display: table
-  & > [class*="column-"]
-    float: left
-
-.row,.flex
+.flex
   padding: 0px
   width: 100%
+  display: flex
+  flex-flow: row wrap
+
+  &.row
+    flex-flow: row
+  &.column
+    flex-flow: column
+
   &:not(.no-column-padding) > [class*="column-"]
     padding: $column-padding-y $column-padding-x
     display: block
@@ -24,7 +19,7 @@ body > .content, body > main > .content
     border: 0px
 
   @media only screen and (max-width: 576px)
-    & > [class*="column-"]
+    & > *
       width: 100% !important
 
   @each $column-size in $row-division
@@ -37,14 +32,6 @@ body > .content, body > main > .content
         & > .column-#{$screen-name}-#{$column-size}
           width: #{100%/12*$column-size}
 
-.flex
-  display: flex
-  width: 100%
-  padding: 0px
-  &.wrap
-    flex-flow: row wrap
-  &.column
-    flex-flow: column
   @each $direction in $flex-direction
     &.#{$direction}
       flex-direction: $direction
@@ -58,15 +45,6 @@ body > .content, body > main > .content
   //   & > *[class=align-#{$column-align}]
   //     align-self: $column-align !important
   //
-  //
-
-  @media only screen and (max-width: 576px)
-    &:not(.row)
-      flex-direction: column !important
-
-  @media only screen and (max-width: 576px)
-    .column-reverse
-      flex-direction: column-reverse !important
 
 @each $content-name, $content-align in $justify-contents
   .justify-contents-#{$content-name}
