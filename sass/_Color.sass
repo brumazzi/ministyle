@@ -5,14 +5,17 @@
   .bg-#{$color-name}
     background-color: $color !important
     color: flip-color($color, $color-light, $color-dark) !important
+@each $color-name, $color in $dark-light-colors
+  .bg-#{$color-name}
+    background-color: $color !important
+    color: flip-color($color, $color-light, $color-dark) !important
+
+@each $color-name, $color in $colors
   .bg-hover-#{$color-name}:hover
     background-color: $color !important
     color: flip-color($color, $color-light, $color-dark) !important
 
 @each $color-name, $color in $dark-light-colors
-  .bg-#{$color-name}
-    background-color: $color !important
-    color: flip-color($color, $color-light, $color-dark) !important
   .bg-hover-#{$color-name}:hover
     background-color: $color !important
     color: flip-color($color, $color-light, $color-dark) !important

@@ -10,10 +10,8 @@
   display: inline-block
   font-size: 1.1rem
   font-weight: 700
-  // height: 3.8rem
   letter-spacing: 0.1rem
-  // line-height: 3.8rem
-  padding: 1.16rem 3rem
+  padding: $button-padding-y $button-padding-x
   text-align: center
   text-decoration: none
   text-transform: uppercase
@@ -63,6 +61,29 @@
 
         &:active
           background-color: darken($color, 5%) !important
+
+  &.close
+    position: absolute
+    width: 2rem
+    height: 2rem
+    &.x2
+      width: 3rem
+      height: 3rem
+    padding: 0px
+    &.top-left
+      top: 0px
+      left: 0px
+      transform: translateX(-50%) translateY(-50%)
+    &.top-right
+      right: 0px
+      transform: translateX(50%) translateY(-50%)
+    &.bottom-left
+      bottom: 0px
+      left: 0px
+      transform: translateX(-50%) translateY(50%)
+    &.bottom-right
+      right: 0px
+      transform: translateX(50%) translateY(50%)
 
   &[disabled]
     cursor: default
